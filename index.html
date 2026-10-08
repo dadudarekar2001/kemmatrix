@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kem Matrix Solutions – Premium Construction Chemical Solutions</title>
+  <meta name="description" content="Kem Matrix Solutions – Premium Construction Chemical Solutions. Browse 200+ products across Waterproofing, Tile Adhesives, Paints, Abrasives and more. Order via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', Helvetica, sans-serif;
+      font-size: 16px;
+      background: #f5f6f8;
+      color: #0b1d4d;
+    }
+    a { color: #e8541a; }
+    a:hover { color: #b83f10; }
+    img { display: block; max-width: 100%; }
+    input, button { font-family: inherit; }
+    input::placeholder { color: #6b779b; }
+
+    /* ── CSS Variables ── */
+    :root {
+      --navy: #0b1d4d;
+      --orange: #e8541a;
+      --orange-light: #ff8a57;
+      --orange-hover: #ff6a30;
+      --bg: #f5f6f8;
+      --border: #dfe3ec;
+      --border-light: #e1e5ee;
+      --muted: #46537a;
+      --subtle: #5a678c;
+      --card-bg: #fff;
+      --header-h: 74px;
+      --nav-h: 116px;
+    }
+
+    /* ── Header ── */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 3px solid var(--orange);
+      box-shadow: 0 2px 12px rgba(11,29,77,.08);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo img { height: 56px; width: auto; }
+    .btn-wa {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      min-height: 44px;
+      white-space: nowrap;
+      transition: background .18s;
+    }
+    .btn-wa:hover { background: var(--orange); color: #fff; }
+    .btn-wa .wa-icon {
+      flex-shrink: 0;
+      display: block;
+    }
+
+    /* ── Hero ── */
+    #hero {
+      background: var(--navy);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-shape {
+      position: absolute;
+      right: -60px; top: 0; bottom: 0;
+      width: 46%;
+      background: #f5f6f8;
+      clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+      opacity: .06;
+      pointer-events: none;
+    }
+    .hero-line {
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--orange) 0 30%, transparent 30%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 20px 64px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      align-items: center;
+      gap: 48px;
+    }
+    .hero-content { /* left text column */ }
+    .hero-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-logo-card {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.40);
+    }
+    .hero-logo-card img {
+      width: 280px;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Brand Partners ── */
+    #brand-partners {
+      background: #fff;
+      border-bottom: 2px solid var(--border);
+    }
+    .brand-partners-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 28px;
+    }
+    .brand-label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .brand-label-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .brand-label-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .brand-logos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .brand-logo-item {
+      flex: 1;
+      min-width: 90px;
+      max-width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .brand-logo-item:hover {
+      border-color: var(--border);
+      box-shadow: 0 2px 12px rgba(11,29,77,.07);
+    }
+    .brand-logo-item img {
+      max-height: 44px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      letter-spacing: .2em;
+      font-size: 14px;
+      color: var(--orange-light);
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(44px, 8vw, 92px);
+      line-height: .95;
+      margin: 14px 0 0;
+      text-transform: uppercase;
+      max-width: 760px;
+    }
+    .hero-title span { color: var(--orange); }
+    .hero-rule {
+      width: 64px; height: 3px;
+      background: var(--orange);
+      margin: 24px 0;
+    }
+    .hero-desc {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 540px;
+      margin: 0 0 28px;
+      color: #dbe2f5;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background .18s;
+    }
+    .btn-primary:hover { background: var(--orange-hover); color: #fff; }
+    .btn-outline {
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background .18s, color .18s;
+    }
+    .btn-outline:hover { background: #fff; color: var(--navy); }
+
+    /* ── Products Nav ── */
+    #products-nav {
+      position: sticky;
+      top: var(--header-h);
+      z-index: 90;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .search-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .search-wrap {
+      flex: 1;
+      min-width: 0;
+      position: relative;
+    }
+    #search-input {
+      width: 100%;
+      height: 44px;
+      border: 1px solid #cfd6e6;
+      border-radius: 8px;
+      padding: 0 14px;
+      font-size: 16px;
+      background: #fff;
+      color: var(--navy);
+      outline: none;
+      transition: border-color .18s;
+      -webkit-appearance: none;
+    }
+    #search-input:focus { border-color: var(--orange); }
+    #count-label {
+      font-size: 14px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    /* Suggestions dropdown */
+    #suggestions {
+      display: none;
+      position: absolute;
+      left: 0; right: 0;
+      top: 48px;
+      background: #fff;
+      border: 1px solid #cfd6e6;
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(11,29,77,.18);
+      overflow: hidden;
+      z-index: 200;
+    }
+    #suggestions.open { display: block; }
+    .suggest-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 14px;
+      min-height: 44px;
+      cursor: pointer;
+      border-bottom: 1px solid #eef1f7;
+    }
+    .suggest-item:last-child { border-bottom: none; }
+    .suggest-item:hover { background: #eef1f7; }
+    .suggest-label { font-size: 15px; font-weight: 600; color: var(--navy); }
+    .suggest-cat { font-size: 12px; color: var(--subtle); margin-left: auto; text-align: right; }
+    /* Chips row */
+    .chips-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+    .chips-row::-webkit-scrollbar { display: none; }
+    .chip {
+      flex: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 0 16px;
+      height: 40px;
+      border-radius: 99px;
+      border: 1px solid #cfd6e6;
+      background: #fff;
+      color: var(--navy);
+      transition: background .15s, color .15s;
+    }
+    .chip.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    /* ── Main Content ── */
+    #main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 20px 56px;
+    }
+    #empty-state {
+      display: none;
+      padding: 64px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    #empty-state.visible { display: block; }
+
+    /* Category section */
+    .cat-section {
+      padding-top: 32px;
+      scroll-margin-top: 210px;
+    }
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 10px;
+    }
+    .cat-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(26px, 4vw, 38px);
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+    .cat-rule { width: 36px; height: 3px; background: var(--orange); flex-shrink: 0; }
+    .cat-count { font-size: 14px; color: var(--subtle); margin-left: auto; white-space: nowrap; }
+
+    /* Product group */
+    .product-group { margin-top: 22px; }
+    .group-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .group-diamond {
+      width: 10px; height: 10px;
+      background: var(--orange);
+      display: block;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr));
+      gap: 14px;
+    }
+
+    /* Product card */
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .18s, border-color .18s;
+    }
+    .product-card:hover {
+      box-shadow: 0 10px 28px rgba(11,29,77,.14);
+      border-color: var(--orange);
+    }
+    .product-img-wrap {
+      height: 170px;
+      background: #eef1f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .product-img-wrap img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(closest-side, #000 84%, transparent 100%);
+      mask-image: radial-gradient(closest-side, #000 84%, transparent 100%);
+    }
+    .product-body {
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .product-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #c4410f;
+    }
+    .product-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+    .product-sizes {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .product-desc {
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+    .product-spacer { flex: 1; }
+    .btn-buy {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      height: 44px;
+      border-radius: 6px;
+      transition: background .18s;
+    }
+    .btn-buy:hover { background: var(--navy); color: #fff; }
+
+    /* ── Footer ── */
+    #contact {
+      background: var(--navy);
+      color: #fff;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 20px 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: 32px;
+    }
+    .footer-brand-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .footer-brand-name span { color: var(--orange); }
+    .footer-tagline {
+      font-size: 13px;
+      letter-spacing: .14em;
+      color: #b9c4e4;
+      margin-top: 8px;
+    }
+    .footer-contact { font-size: 16px; line-height: 1.9; }
+    .footer-contact-label {
+      font-weight: 600;
+      color: var(--orange-light);
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .footer-contact a,
+    .footer-contact a:visited { color: #fff; text-decoration: none; }
+    .footer-contact a:hover { color: #fff; }
+    .footer-address { font-size: 16px; line-height: 1.6; }
+    .footer-address-label {
+      font-weight: 600;
+      color: var(--orange-light);
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .footer-copy {
+      border-top: 1px solid #243a74;
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #b9c4e4;
+    }
+
+    /* ── Tablet ── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 44px 20px 56px;
+      }
+      .hero-logo-wrap {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .hero-logo-card img { width: 200px; }
+      .hero-title { max-width: 100%; }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      :root { --header-h: 66px; }
+      .header-inner { padding: 6px 14px; }
+      .header-logo img { height: 46px; }
+      .btn-wa { font-size: 14px; padding: 8px 12px; gap: 6px; }
+      .btn-wa .wa-text { display: none; }
+      .hero-inner { padding: 32px 16px 44px; gap: 24px; }
+      .hero-logo-card img { width: 160px; }
+      .hero-desc { font-size: 16px; }
+      .brand-partners-inner { padding: 18px 16px 22px; }
+      .brand-logo-item { min-width: 60px; max-width: 100px; padding: 6px 8px; }
+      .brand-logo-item img { max-height: 30px; }
+      .nav-inner { padding: 8px 14px; }
+      #main-content { padding: 4px 14px 48px; }
+      .product-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 10px; }
+      .product-img-wrap { height: 140px; }
+      .product-name { font-size: 18px; }
+      .footer-grid { padding: 36px 16px 20px; gap: 24px; }
+    }
+    @media (max-width: 380px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .brand-logo-item { min-width: 50px; max-width: 80px; padding: 4px 6px; }
+      .brand-logo-item img { max-height: 24px; }
+    }
+
+    /* ── Utilities ── */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="header-logo" aria-label="Kem Matrix Solutions – Home">
+      <img src="assets/logo.jpg" alt="Kem Matrix Solutions">
+    </a>
+    <a href="#" id="wa-header-btn" class="btn-wa" target="_blank" rel="noopener">
+      <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none">
+        <path fill="#25D366" d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.1 1.516 5.82L0 24l6.335-1.492A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+        <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.15-.198.296-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.4 12.4 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      </svg>
+      <span class="wa-text">Chat on WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-shape"></div>
+  <div class="hero-line"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Premium Construction Chemical Solutions</div>
+      <h1 class="hero-title">Building <span>Better</span><br>Together</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-desc" id="hero-desc">Browse our complete range of construction chemicals and materials. Pick a product, tap Buy and we'll reply on WhatsApp.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Browse products</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </div>
+    </div>
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-card">
+        <img src="assets/logo.jpg" alt="Kem Matrix Solutions">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BRAND PARTNERS ══════════ -->
+<section id="brand-partners">
+  <div class="brand-partners-inner">
+    <div class="brand-label">
+      <span class="brand-label-line"></span>
+      <span class="brand-label-text">Trusted Brand Partners</span>
+      <span class="brand-label-line"></span>
+    </div>
+    <div class="brand-logos">
+      <div class="brand-logo-item">
+        <img src="assets/brands/image1.png" alt="Thermax">
+      </div>
+      <div class="brand-logo-item">
+        <img src="assets/brands/image2.png" alt="Fosroc Saint-Gobain">
+      </div>
+      <div class="brand-logo-item">
+        <img src="assets/brands/image3.png" alt="ICA Chemicals">
+      </div>
+      <div class="brand-logo-item">
+        <img src="assets/brands/image4.png" alt="Dr. Fixit">
+      </div>
+      <div class="brand-logo-item">
+        <img src="assets/brands/image5.png" alt="Nano Addmix">
+      </div>
+      <div class="brand-logo-item">
+        <img src="assets/brands/image6.png" alt="Rayco Gypsum">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRODUCTS NAV ══════════ -->
+<nav id="products" aria-label="Product search and filter">
+  <div class="nav-inner">
+    <div class="search-row">
+      <div class="search-wrap">
+        <input
+          type="search"
+          id="search-input"
+          autocomplete="off"
+          placeholder="Search products or brands"
+          aria-label="Search products"
+        >
+        <div id="suggestions" role="listbox" aria-label="Search suggestions"></div>
+      </div>
+      <span id="count-label" aria-live="polite"></span>
+    </div>
+    <div class="chips-row" id="chips-row" role="group" aria-label="Filter by category"></div>
+  </div>
+</nav>
+
+<!-- ══════════ MAIN ══════════ -->
+<main id="main-content">
+  <div id="empty-state">
+    No products match your search.
+    <a href="#" id="wa-empty-link" target="_blank" rel="noopener">Ask us on WhatsApp</a> and we'll source it for you.
+  </div>
+  <div id="catalog"></div>
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Kem <span>Matrix</span> Solutions</div>
+      <div class="footer-tagline">STRONGER SOLUTIONS • BETTER FUTURE</div>
+    </div>
+    <div class="footer-contact">
+      <div class="footer-contact-label">Sudarshan Anuse · Proprietor</div>
+      <a href="tel:+919860173321">9860173321</a><br>
+      <a href="mailto:kemmatrixsolutions@gmail.com">kemmatrixsolutions@gmail.com</a><br>
+      <a href="https://www.kemmatrix.com" target="_blank" rel="noopener">www.kemmatrix.com</a>
+    </div>
+    <div class="footer-address">
+      <div class="footer-address-label">Address</div>
+      Bhugaon, Pune – 412115
+    </div>
+  </div>
+  <div class="footer-copy">© Kem Matrix Solutions. All rights reserved. Brand names and logos belong to their respective owners.</div>
+</footer>
+
+<!-- ══════════ SCRIPT ══════════ -->
+<script>
+/* ── Product Data ── */
+const PRODUCTS = [{"name":"Concrete Admixtures","id":"concrete-admixtures","groups":[{"name":"Nano Addmix","items":[{"n":"Nano-Creet","b":"Nano Addmix","i":"assets/nano-creet.png","t":"RMC / On-site","d":"Impermeable, crack-resistant concrete with higher compressive strength and less water curing."},{"n":"NT-19","b":"Nano Addmix","i":"assets/nt-19.png","t":"Nano-tech admixture","d":"Improves workability and finish of cement concrete; 15% strength gain with good water resistance."}]}]},{"name":"Waterproofing","id":"waterproofing","groups":[{"name":"Nano Addmix","items":[{"n":"Top Shield","b":"Nano Addmix","i":"assets/top-shield.png","t":"1K-PU coating","d":"Single-component polyurethane waterproof coating for surfaces needing a durable seal."}]},{"name":"Integral – Liquid","items":[{"n":"Pidiproof LW+","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidiproof-lw.png"},{"n":"Pidiproof LW+ Super","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidiproof-lw-super.png"},{"n":"Plaster Master","b":"Dr. Fixit","i":"assets/cat/dr-fixit-plaster-master.png"}]},{"name":"Integral – Powder","items":[{"n":"Powder Waterproof","b":"Dr. Fixit","i":"assets/cat/dr-fixit-powder-waterproof.png"},{"n":"Pidicrete URP","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidicrete-urp.png"},{"n":"Super Latex","b":"Dr. Fixit","i":"assets/cat/dr-fixit-super-latex.png"},{"n":"Pidicrete MPB","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidicrete-mpb.png"},{"n":"Pidicrete WP","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidicrete-wp.png"},{"n":"All Seal","b":"Dr. Fixit","i":"assets/cat/dr-fixit-all-seal.png"},{"n":"Powercrete","b":"Dr. Fixit","i":"assets/cat/dr-fixit-powercrete.png"}]},{"name":"Acrylic Waterproofing Coatings","items":[{"n":"Primeseal","b":"Dr. Fixit","i":"assets/cat/dr-fixit-primeseal.png"},{"n":"Raincoat","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat.png"},{"n":"Raincoat Classic","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat-classic.png"},{"n":"Raincoat Select","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat-select.png"},{"n":"Raincoat Waterproof Coating","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat-waterproof-coating.png"},{"n":"Raincoat Neo","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat-neo.png"},{"n":"Roofseal Select","b":"Dr. Fixit","i":"assets/cat/dr-fixit-roofseal-select.png"},{"n":"Roofseal Classic New","b":"Dr. Fixit","i":"assets/cat/dr-fixit-roofseal-classic-new.png"},{"n":"Roofseal Ultra","b":"Dr. Fixit","i":"assets/cat/dr-fixit-roofseal-ultra.png"},{"n":"Sureseal","b":"Dr. Fixit","i":"assets/cat/dr-fixit-sureseal.png"},{"n":"Raincoat Star","b":"Dr. Fixit","i":"assets/cat/dr-fixit-raincoat-star.png"}]},{"name":"Cementitious & Bituminous Coatings","items":[{"n":"Pidifin 2K","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidifin-2k.png"},{"n":"Fastflex","b":"Dr. Fixit","i":"assets/cat/dr-fixit-fastflex.png"},{"n":"Bitufix","b":"Dr. Fixit","i":"assets/cat/dr-fixit-bitufix.png"}]},{"name":"Damp-proofing & Protection","items":[{"n":"Repellin WR","b":"Dr. Fixit","i":"assets/cat/dr-fixit-repellin-wr.png"},{"n":"Dampguard","b":"Dr. Fixit","i":"assets/cat/dr-fixit-dampguard.png"},{"n":"Krystalline","b":"Dr. Fixit","i":"assets/cat/dr-fixit-krystalline.png"}]},{"name":"Roff Waterproofing","items":[{"n":"Bond Repair (RBR)","b":"Roff","i":"assets/cat/roff-bond-repair-rbr.png"},{"n":"Hyproof","b":"Roff","i":"assets/cat/roff-hyproof.png"},{"n":"Hyguard EX","b":"Roff","i":"assets/cat/roff-hyguard-ex.png"},{"n":"Supercrete","b":"Roff","i":"assets/cat/roff-supercrete.png"}]}]},{"name":"Tile Adhesives & Grouts","id":"tile-adhesives-grouts","groups":[{"name":"Nano Addmix","items":[{"n":"Kera-Fix","b":"Nano Addmix","i":"assets/kera-fix.png","t":"IS Type 1","d":"Cement-based adhesive for everyday tile fixing."},{"n":"Kera-Set","b":"Nano Addmix","i":"assets/kera-set.png","t":"IS Type 2","d":"Improved bond strength for large and vitrified tiles."},{"n":"Kera-Max","b":"Nano Addmix","i":"assets/kera-max.png","t":"IS Type 3","d":"High-performance adhesive for demanding tiling jobs."},{"n":"Cera Gel 24","b":"Nano Addmix","i":"assets/cera-gel.png","t":"Type 4 S1 · Gel technology","d":"Gel-technology adhesive with no limit on tile size."},{"n":"Kera Poxy","b":"Nano Addmix","i":"assets/kera-poxy.png","t":"Stone on metal","d":"Strong epoxy bonding for stone-on-metal applications."},{"n":"Rapid Bond","b":"Nano Addmix","i":"assets/rapid-bond.png","t":"Stone on stone","d":"Two-part adhesive with super strength for stone-to-stone fixing."},{"n":"Tough Seal 37","b":"Nano Addmix","i":"assets/tough-seal.png","t":"Epoxy joint filler","d":"Two-component epoxy joint filler for tile and stone joints."},{"n":"Klaini-11","b":"Nano Addmix","i":"assets/klaini-11.png","t":"Cured epoxy cleaner","d":"Ready-to-use cleaner that removes epoxy residues and streaks from ceramic, porcelain and glass mosaic tiles."}]},{"name":"Other Tile Adhesives","items":[{"n":"Fevimate TG","b":"Dr. Fixit","i":"assets/cat/dr-fixit-fevimate-tg.png"}]},{"name":"Roff Tile Adhesives","items":[{"n":"New Construction Tile Adhesive (NCA) Grey","b":"Roff","i":"assets/cat/roff-new-construction-tile-adhesive-nca-grey.png"},{"n":"Non-Skid Adhesive (NSA) Grey","b":"Roff","i":"assets/cat/roff-non-skid-adhesive-nsa-grey.png"},{"n":"Non-Skid Adhesive (NSA) White","b":"Roff","i":"assets/cat/roff-non-skid-adhesive-nsa-white.png"},{"n":"Vitrofix Grey","b":"Roff","i":"assets/cat/roff-vitrofix-grey.png"},{"n":"Vitrofix White","b":"Roff","i":"assets/cat/roff-vitrofix-white.png"},{"n":"Vitrofix Ultra Grey","b":"Roff","i":"assets/cat/roff-vitrofix-ultra-grey.png"},{"n":"Vitrofix Ultra White","b":"Roff","i":"assets/cat/roff-vitrofix-ultra-white.png"},{"n":"Extrofix Grey","b":"Roff","i":"assets/cat/roff-extrofix-grey.png"},{"n":"Extrofix White","b":"Roff","i":"assets/cat/roff-extrofix-white.png"},{"n":"Extrofix Ultra Grey Adhesive","b":"Roff","i":"assets/cat/roff-extrofix-ultra-grey-adhesive.png"},{"n":"Extrofix Ultra White Adhesive","b":"Roff","i":"assets/cat/roff-extrofix-ultra-white-adhesive.png"},{"n":"Masterfix","b":"Roff","i":"assets/cat/roff-masterfix.png"},{"n":"Tile Bonder","b":"Roff","i":"assets/cat/roff-tile-bonder.png"},{"n":"Vertifix","b":"Roff","i":"assets/cat/roff-vertifix.png"}]},{"name":"Cleaners, Grouts & Additives","items":[{"n":"Starlike*","b":"Roff","i":"assets/cat/roff-starlike.png"},{"n":"Starlike Neutral","b":"Roff","i":"assets/cat/roff-starlike-neutral.png"},{"n":"Starlike Metallic Finish","b":"Roff","i":"assets/cat/roff-starlike-metallic-finish.png"},{"n":"Rainbow Tile Mate Epoxy*","b":"Roff","i":"assets/cat/roff-rainbow-tile-mate-epoxy.png"},{"n":"Sparkles","b":"Roff","i":"assets/cat/roff-sparkles.png"},{"n":"Rainbow Tile Mate","b":"Roff","i":"assets/cat/roff-rainbow-tile-mate.png"},{"n":"Rainbow Tile Mate Wide Additive","b":"Roff","i":"assets/cat/roff-rainbow-tile-mate-wide-additive.png"},{"n":"Cera Clean*","b":"Roff","i":"assets/cat/roff-cera-clean.png"}]},{"name":"Application Tools","items":[{"n":"Spacers","b":"Roff","i":"assets/cat/roff-spacers.png"},{"n":"Trowels","b":"Roff","i":"assets/cat/roff-trowels.png"},{"n":"Grout Cutter (Twin Blade)","b":"Roff","i":"assets/cat/roff-grout-cutter-twin-blade.png"},{"n":"Grout Floater (Big / Small)","b":"Roff","i":"assets/cat/roff-grout-floater-big-small.png"},{"n":"Rubber Mallet","b":"Roff","i":"assets/cat/roff-rubber-mallet.png"},{"n":"Suction Cup","b":"Roff","i":"assets/cat/roff-suction-cup.png"},{"n":"Tile Leveling System (Base, Wedges, Plier)","b":"Roff","i":"assets/cat/roff-tile-leveling-system-base-wedges-plier.png"}]}]},{"name":"Wall Putty & Plaster","id":"wall-putty-plaster","groups":[{"name":"Nano Addmix","items":[{"n":"Umbrella Coat","b":"Nano Addmix","i":"assets/umbrella-coat.png","t":"2-in-1 wall putty","d":"Waterproof wall putty for interior and exterior walls."},{"n":"Plast 333+++","b":"Nano Addmix","i":"assets/plast-333.png","t":"Plaster admixture","d":"Nano-technology admixture for better plaster strength and adhesion, with less cracking."}]},{"name":"Putties","items":[{"n":"Waterproof Wall Putty","b":"Dr. Fixit","i":"assets/cat/dr-fixit-waterproof-wall-putty.png"},{"n":"Primo Putty","b":"Dr. Fixit","i":"assets/cat/dr-fixit-primo-putty.png"},{"n":"Primo White","b":"Dr. Fixit","i":"assets/cat/dr-fixit-primo-white.png"},{"n":"Wallmax X Putty","b":"JK Cement","i":"assets/cat/jk-cement-wallmax-x-putty.png","s":"1 KG,5 KG,20 KG,40 KG"}]},{"name":"Gypsum Plasters","items":[{"n":"One Coat Building Plaster (Gypsum Ultra)","b":"Rayco","i":"assets/cat/rayco-building-plaster-gypsum-ultra.png"},{"n":"Water Repellent Plaster","b":"Rayco","i":"assets/cat/rayco-water-repellent-plaster.png"},{"n":"Bond It","b":"Rayco","i":"assets/cat/rayco-bond-it.png"}]}]},{"name":"Block Jointing Mortars","id":"block-jointing-mortars","groups":[{"name":"Nano Addmix","items":[{"n":"Nano Bond","b":"Nano Addmix","i":"assets/nano-bond.png","t":"AAC / CLC blocks","d":"Thin, strong block-jointing adhesive for masonry in AAC and CLC blocks."}]},{"name":"Roff","items":[{"n":"Blockline Mortar","b":"Roff","i":"assets/cat/roff-blockline-mortar.png"}]}]},{"name":"Gypsum & Drywall","id":"gypsum-drywall","groups":[{"name":"Gypsum & Drywall Accessories","items":[{"n":"Gypsum Board","b":"Rayco","i":"assets/cat/rayco-gypsum-board.png"},{"n":"Drywall Joint Tape","b":"Rayco","i":"assets/cat/rayco-drywall-joint-tape.png"},{"n":"Drywall Screws","b":"Rayco","i":"assets/cat/rayco-drywall-screws.png"},{"n":"Measuring Tape","b":"Rayco","i":"assets/cat/rayco-measuring-tape.png"},{"n":"Fasnar","b":"Rayco","i":"assets/cat/rayco-fasnar.png"}]},{"name":"Plaster of Paris","items":[{"n":"P.O.P. No. 1","b":"Shree Ganesh","i":"assets/cat/shree-ganesh-p-o-p-no-1.png","s":"1 KG,5 KG"}]}]},{"name":"Cement & Whitewash","id":"cement-whitewash","groups":[{"name":"Whitewash & Cement","items":[{"n":"Sparkling White Wash","b":"Surya Cem","i":"assets/cat/surya-cem-sparkling-white-wash.png","s":"1 KG,5 KG,10 KG,25 KG"},{"n":"White Portland Cement","b":"Birla White","i":"assets/cat/birla-white-white-portland-cement.png","s":"1 KG,5 KG,50 KG"},{"n":"Grey Cement","b":"","i":"assets/cat/grey-cement.png","s":"1 KG,5 KG"}]},{"name":"Whitening & Powders","items":[{"n":"Microfine Whitening","b":"Shree Ganesh","i":"assets/cat/shree-ganesh-microfine-whitening.png","s":"1 KG,5 KG,20 KG"},{"n":"Fakki / Dolomite Powder","b":"Shree Ganesh","i":"assets/cat/shree-ganesh-fakki-dolomite-powder.png","s":"1 KG,5 KG,40 KG"},{"n":"Hurmus Powder","b":"Shree Ganesh","i":"assets/cat/shree-ganesh-hurmus-powder.png","s":"1 KG,5 KG"}]}]},{"name":"Repairs, Crack Fill & Sealants","id":"repairs-crack-fill-sealants","groups":[{"name":"Repair Mortars & Systems","items":[{"n":"Epoxy Bonding Agent","b":"Dr. Fixit","i":"assets/cat/dr-fixit-epoxy-bonding-agent.png"},{"n":"Bathseal Tape","b":"Dr. Fixit","i":"assets/cat/dr-fixit-bathseal-tape.png"},{"n":"Polymer Mortar HB","b":"Dr. Fixit","i":"assets/cat/dr-fixit-polymer-mortar-hb.png"},{"n":"Rust Remover","b":"Dr. Fixit","i":"assets/cat/dr-fixit-rust-remover.png"},{"n":"Pidicrete AM","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidicrete-am.png"},{"n":"Repair Polymer Mortar","b":"Dr. Fixit","i":"assets/cat/dr-fixit-repair-polymer-mortar.png"},{"n":"Micro Concrete","b":"Dr. Fixit","i":"assets/cat/dr-fixit-micro-concrete.png"},{"n":"Pidigrout 10M","b":"Dr. Fixit","i":"assets/cat/dr-fixit-pidigrout-10m.png"}]},{"name":"Crack Filling","items":[{"n":"Crack-X Powder","b":"Dr. Fixit","i":"assets/cat/dr-fixit-crack-x-powder.png"},{"n":"Crack-X Paste","b":"Dr. Fixit","i":"assets/cat/dr-fixit-crack-x-paste.png"},{"n":"Crack-X Shrinkfree","b":"Dr. Fixit","i":"assets/cat/dr-fixit-crack-x-shrinkfree.png"}]},{"name":"Silicone Sealants","items":[{"n":"Feviseal GP Pro","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-gp-pro.png"},{"n":"Feviseal Neutral Pro","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-neutral-pro.png"},{"n":"Feviseal Weatherproof Pro","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-weatherproof-pro.png"},{"n":"Feviseal HY 100","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-hy-100.png"}]},{"name":"Acrylic Sealants","items":[{"n":"Feviseal Multipurpose Acrylic Sealant","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-multipurpose-acrylic-sealant.png"},{"n":"M-Seal Feviseal Bathroom & Kitchen","b":"Dr. Fixit","i":"assets/cat/dr-fixit-m-seal-feviseal-bathroom-kitchen.png"}]},{"name":"Polyurethane Sealants","items":[{"n":"Feviseal HY 300","b":"Dr. Fixit","i":"assets/cat/dr-fixit-feviseal-hy-300.png"}]},{"name":"Adhesives","items":[{"n":"Fevi Kwik 102 Low Viscosity","b":"Pidilite","i":"assets/cat/pidilite-fevi-kwik-102-low-viscosity.png"}]}]},{"name":"Paints & Wood Finishes","id":"paints-wood-finishes","groups":[{"name":"Luxury Interior Emulsions","items":[{"n":"Silk Glamor Matt","b":"Berger","i":"assets/cat/berger-silk-glamor-matt.png"},{"n":"Silk Glamor High Sheen","b":"Berger","i":"assets/cat/berger-silk-glamor-high-sheen.png"},{"n":"Silk Glamor Soft Sheen","b":"Berger","i":"assets/cat/berger-silk-glamor-soft-sheen.png"},{"n":"Silk Glamor Dazzle","b":"Berger","i":"assets/cat/berger-silk-glamor-dazzle.png"}]},{"name":"Premium Interior Emulsions","items":[{"n":"Easy Clean","b":"Berger","i":"assets/cat/berger-easy-clean.png"},{"n":"Easy Clean Silky Touch","b":"Berger","i":"assets/cat/berger-easy-clean-silky-touch.png"},{"n":"Easy Clean Fresh","b":"Berger","i":"assets/cat/berger-easy-clean-fresh.png"},{"n":"Rangoli Rich Matt","b":"Berger","i":"assets/cat/berger-rangoli-rich-matt.png"},{"n":"Rangoli Total Care","b":"Berger","i":"assets/cat/berger-rangoli-total-care.png"}]},{"name":"Economy Interior Emulsions","items":[{"n":"Bison Glow","b":"Berger","i":"assets/cat/berger-bison-glow.png"},{"n":"Bison Emulsion","b":"Berger","i":"assets/cat/berger-bison-emulsion.png"},{"n":"Bison Lite","b":"Berger","i":"assets/cat/berger-bison-lite.png"}]},{"name":"Ceiling & Enamels","items":[{"n":"Ceiling White","b":"Berger","i":"assets/cat/berger-ceiling-white.png"},{"n":"Butterfly Enamel","b":"Berger","i":"assets/cat/berger-butterfly-enamel.png"},{"n":"Luxol Gloss Enamel","b":"Berger","i":"assets/cat/berger-luxol-gloss-enamel.png"}]},{"name":"Designer Finishes","items":[{"n":"Silk Glamart Metallica","b":"Berger","i":"assets/cat/berger-silk-glamart-metallica.png"},{"n":"Silk Glamart Non Metallic","b":"Berger","i":"assets/cat/berger-silk-glamart-non-metallic.png"},{"n":"Silk Glamart Metallica for Designs","b":"Berger","i":"assets/cat/berger-silk-glamart-metallica-for-designs.png"},{"n":"Silk Glamart Stucco","b":"Berger","i":"assets/cat/berger-silk-glamart-stucco.png"},{"n":"Silk Glamart Vintage","b":"Berger","i":"assets/cat/berger-silk-glamart-vintage.png"}]},{"name":"ICA Italian Wood Finishes","items":[{"n":"Pidilite Finezza PU High Glossy Clear","b":"ICA","i":"assets/cat/ica-pidilite-finezza-pu-high-glossy-clear.png"},{"n":"Italian Wood Finish (Creativa, Lucido, Finezza, Acquabella, Tinte)","b":"ICA","i":"assets/cat/ica-italian-wood-finish-creativa-lucido-finezza-acquabella-tinte.png"}]}]},{"name":"Abrasives & Cutting Tools","id":"abrasives-cutting-tools","groups":[{"name":"Sanding Sheets – Waterproof","items":[{"n":"Jawan","b":"CUMI","i":"assets/cat/cumi-jawan.png"},{"n":"Ajax","b":"CUMI","i":"assets/cat/cumi-ajax.png"},{"n":"Sandmaster Deco","b":"CUMI","i":"assets/cat/cumi-sandmaster-deco.png"},{"n":"Warrior Plus","b":"CUMI","i":"assets/cat/cumi-warrior-plus.png"}]},{"name":"Sanding Sheets – Dry & Stearated","items":[{"n":"Ajax Sukha Sheets","b":"CUMI","i":"assets/cat/cumi-ajax-sukha-sheets.png"},{"n":"Appu Sukha Sheets","b":"CUMI","i":"assets/cat/cumi-appu-sukha-sheets.png"},{"n":"Stearated Sheets","b":"CUMI","i":"assets/cat/cumi-stearated-sheets.png"}]},{"name":"Sanding Sheets – Shine Line","items":[{"n":"CL 577+ Latex Sheets","b":"CUMI","i":"assets/cat/cumi-cl-577-latex-sheets.png"},{"n":"CL 577 Latex Sheets","b":"CUMI","i":"assets/cat/cumi-cl-577-latex-sheets-b2-3.png"},{"n":"CL 577 Microfine Sheets","b":"CUMI","i":"assets/cat/cumi-cl-577-microfine-sheets.png"}]},{"name":"Rolls","items":[{"n":"Sand Master NXT Cloth Roll","b":"CUMI","i":"assets/cat/cumi-sand-master-nxt-cloth-roll.png"},{"n":"Concord NXT Cloth Roll","b":"CUMI","i":"assets/cat/cumi-concord-nxt-cloth-roll.png"},{"n":"Appu Plus Cloth Roll","b":"CUMI","i":"assets/cat/cumi-appu-plus-cloth-roll.png"},{"n":"Cumi Flex Flexible Roll","b":"CUMI","i":"assets/cat/cumi-cumi-flex-flexible-roll.png"},{"n":"Ajax RMC Roll","b":"CUMI","i":"assets/cat/cumi-ajax-rmc-roll.png"},{"n":"Jawan RMC Roll","b":"CUMI","i":"assets/cat/cumi-jawan-rmc-roll.png"},{"n":"Sandmaster Paper Roll","b":"CUMI","i":"assets/cat/cumi-sandmaster-paper-roll.png"}]},{"name":"Sanding Discs","items":[{"n":"Jawan Fibre Disc","b":"CUMI","i":"assets/cat/cumi-jawan-fibre-disc.png"},{"n":"Sandmaster Plus Fibre Disc","b":"CUMI","i":"assets/cat/cumi-sandmaster-plus-fibre-disc.png"},{"n":"Concord Fibre Disc","b":"CUMI","i":"assets/cat/cumi-concord-fibre-disc.png"},{"n":"Tezz Fibre Disc","b":"CUMI","i":"assets/cat/cumi-tezz-fibre-disc.png"},{"n":"Shakti Fibre Disc","b":"CUMI","i":"assets/cat/cumi-shakti-fibre-disc.png"},{"n":"Sandmaster NXT IDC Disc","b":"CUMI","i":"assets/cat/cumi-sandmaster-nxt-idc-disc.png"},{"n":"Concord Plus IDC Disc","b":"CUMI","i":"assets/cat/cumi-concord-plus-idc-disc.png"},{"n":"Tezz Plus IDC Disc","b":"CUMI","i":"assets/cat/cumi-tezz-plus-idc-disc.png"},{"n":"Concord Flap Disc","b":"CUMI","i":"assets/cat/cumi-concord-flap-disc.png"},{"n":"Jawan Wall Sanding Disc","b":"CUMI","i":"assets/cat/cumi-jawan-wall-sanding-disc.png"},{"n":"Concord H&L Disc","b":"CUMI","i":"assets/cat/cumi-concord-h-l-disc.png"},{"n":"Tezz Dry Sanding Disc","b":"CUMI","i":"assets/cat/cumi-tezz-dry-sanding-disc.png"}]},{"name":"Stone & Wall Cutting Blades","items":[{"n":"Speed Segmented Blades","b":"CUMI","i":"assets/cat/cumi-speed-segmented-blades.png"},{"n":"500 RFT Diamond Blade","b":"CUMI","i":"assets/cat/cumi-500-rft-diamond-blade.png"},{"n":"500 RFT Blade","b":"CUMI","i":"assets/cat/cumi-500-rft-blade.png"},{"n":"Tezz All Rounder Blade","b":"CUMI","i":"assets/cat/cumi-tezz-all-rounder-blade.png"},{"n":"Speed 500 Wall Specialist Blade","b":"CUMI","i":"assets/cat/cumi-speed-500-wall-specialist-blade.png"},{"n":"Boxer Segmented Blades","b":"CUMI","i":"assets/cat/cumi-boxer-segmented-blades.png"},{"n":"Speed Diamond Turbo Segmented","b":"CUMI","i":"assets/cat/cumi-speed-diamond-turbo-segmented.png"},{"n":"Speed Ceramic Thin Turbo Blade","b":"CUMI","i":"assets/cat/cumi-speed-ceramic-thin-turbo-blade.png"},{"n":"Speed Ceramic Narrow Cut","b":"CUMI","i":"assets/cat/cumi-speed-ceramic-narrow-cut.png"},{"n":"Speed Core Drill","b":"CUMI","i":"assets/cat/cumi-speed-core-drill.png"},{"n":"Diamond Polishing Pad","b":"CUMI","i":"assets/cat/cumi-diamond-polishing-pad.png"}]},{"name":"Wood Cutting Blades","items":[{"n":"Premium Wood Cutter","b":"CUMI","i":"assets/cat/cumi-premium-wood-cutter.png"},{"n":"Sandmaster TCT Blades","b":"CUMI","i":"assets/cat/cumi-sandmaster-tct-blades.png"},{"n":"Speed Premium TCT Blades","b":"CUMI","i":"assets/cat/cumi-speed-premium-tct-blades.png"}]},{"name":"Ultra Thin Cutting Wheels","items":[{"n":"Green 2 Net Ultra Thin Wheel","b":"CUMI","i":"assets/cat/cumi-green-2-net-ultra-thin-wheel.png"},{"n":"Tezz Inox Ultra Thin Wheel","b":"CUMI","i":"assets/cat/cumi-tezz-inox-ultra-thin-wheel.png"},{"n":"Zon Red Ultra Thin Wheel","b":"CUMI","i":"assets/cat/cumi-zon-red-ultra-thin-wheel.png"},{"n":"Black Ultra Thin Wheel","b":"CUMI","i":"assets/cat/cumi-black-ultra-thin-wheel.png"},{"n":"Concord Ultra Thin Wheel","b":"CUMI","i":"assets/cat/cumi-concord-ultra-thin-wheel.png"}]},{"name":"Chopsaw Wheels","items":[{"n":"Green Chopsaw DF","b":"CUMI","i":"assets/cat/cumi-green-chopsaw-df.png"},{"n":"Green-Inox Chopsaw SF","b":"CUMI","i":"assets/cat/cumi-green-inox-chopsaw-sf.png"},{"n":"Tezz Inox Chopsaw","b":"CUMI","i":"assets/cat/cumi-tezz-inox-chopsaw.png"},{"n":"Chopsaw SF","b":"CUMI","i":"assets/cat/cumi-chopsaw-sf.png"},{"n":"Samurai Chopsaw SF","b":"CUMI","i":"assets/cat/cumi-samurai-chopsaw-sf.png"},{"n":"Rapid Cut CW09 SF","b":"CUMI","i":"assets/cat/cumi-rapid-cut-cw09-sf.png"},{"n":"NXT Chopsaw DF","b":"CUMI","i":"assets/cat/cumi-nxt-chopsaw-df.png"},{"n":"Zon Red Chopsaw","b":"CUMI","i":"assets/cat/cumi-zon-red-chopsaw.png"},{"n":"Chopsaw CW333 DF","b":"CUMI","i":"assets/cat/cumi-chopsaw-cw333-df.png"}]}]}];
+
+/* ── App State ── */
+const WA_NUM = '919860173321';
+const waLink = (text) => 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(text);
+const GENERAL_LINK = waLink('Hello Kem Matrix Solutions, I would like to enquire about your products.');
+
+let state = { cat: 'all', q: '', focus: false };
+
+/* ── DOM refs ── */
+const searchInput = document.getElementById('search-input');
+const suggestions = document.getElementById('suggestions');
+const countLabel = document.getElementById('count-label');
+const chipsRow = document.getElementById('chips-row');
+const catalog = document.getElementById('catalog');
+const emptyState = document.getElementById('empty-state');
+const waHeaderBtn = document.getElementById('wa-header-btn');
+const waEmptyLink = document.getElementById('wa-empty-link');
+const heroDesc = document.getElementById('hero-desc');
+
+/* ── Init ── */
+function init() {
+  waHeaderBtn.href = GENERAL_LINK;
+  waEmptyLink.href = GENERAL_LINK;
+
+  // Count total products
+  let total = 0;
+  PRODUCTS.forEach(c => c.groups.forEach(g => total += g.items.length));
+  heroDesc.textContent = total + '+ products across ' + PRODUCTS.length + ' categories. Pick a product, tap Buy and we\'ll reply on WhatsApp.';
+
+  buildChips();
+  render();
+}
+
+/* ── Chips ── */
+function buildChips() {
+  chipsRow.innerHTML = '';
+  const allChip = makeChip('all', 'All');
+  chipsRow.appendChild(allChip);
+  PRODUCTS.forEach(c => chipsRow.appendChild(makeChip(c.id, c.name)));
+}
+
+function makeChip(id, name) {
+  const btn = document.createElement('button');
+  btn.className = 'chip' + (state.cat === id ? ' active' : '');
+  btn.textContent = name;
+  btn.setAttribute('role', 'radio');
+  btn.setAttribute('aria-checked', state.cat === id ? 'true' : 'false');
+  btn.addEventListener('click', () => {
+    state.cat = id;
+    buildChips();
+    render();
+    // scroll to products nav top
+    const el = document.getElementById('products');
+    if (el) window.scrollTo({ top: el.offsetTop - 74, behavior: 'smooth' });
+  });
+  return btn;
+}
+
+/* ── Render catalog ── */
+function render() {
+  const needle = state.q.trim().toLowerCase();
+  let total = 0, shown = 0;
+  PRODUCTS.forEach(c => c.groups.forEach(g => total += g.items.length));
+
+  const visibleCats = PRODUCTS.filter(c => state.cat === 'all' || c.id === state.cat).map(c => {
+    const groups = c.groups.map(g => {
+      const items = g.items.filter(p => {
+        if (!needle) return true;
+        return (p.b + ' ' + p.n + ' ' + g.name + ' ' + c.name + ' ' + (p.t || '')).toLowerCase().includes(needle);
+      });
+      return { ...g, items };
+    }).filter(g => g.items.length > 0);
+    const n = groups.reduce((a, g) => a + g.items.length, 0);
+    shown += n;
+    return { ...c, groups, count: n };
+  }).filter(c => c.groups.length > 0);
+
+  countLabel.textContent = total ? shown + ' of ' + total : '';
+
+  if (total > 0 && shown === 0) {
+    emptyState.classList.add('visible');
+    catalog.innerHTML = '';
+    return;
+  }
+  emptyState.classList.remove('visible');
+
+  // Render categories
+  catalog.innerHTML = '';
+  visibleCats.forEach(c => {
+    const section = document.createElement('section');
+    section.id = c.id;
+    section.className = 'cat-section';
+
+    const hdr = document.createElement('div');
+    hdr.className = 'cat-header';
+    hdr.innerHTML = `
+      <h2 class="cat-title">${esc(c.name)}</h2>
+      <span class="cat-rule"></span>
+      <span class="cat-count">${c.count} ${c.count === 1 ? 'product' : 'products'}</span>
+    `;
+    section.appendChild(hdr);
+
+    c.groups.forEach(g => {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'product-group';
+
+      if (c.groups.length > 1) {
+        const gName = document.createElement('div');
+        gName.className = 'group-name';
+        gName.innerHTML = `<span class="group-diamond"></span>${esc(g.name)}`;
+        groupEl.appendChild(gName);
+      }
+
+      const grid = document.createElement('div');
+      grid.className = 'product-grid';
+
+      g.items.forEach(p => {
+        const tag = [p.b, p.t].filter(Boolean).join(' · ');
+        const link = waLink('Hello Kem Matrix Solutions, I would like to enquire about ' + [p.b, p.n].filter(Boolean).join(' ') + ' (' + c.name + '). Please share price and availability.');
+        const card = document.createElement('article');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="product-img-wrap">
+            <img src="${esc(p.i)}" alt="${esc(p.n)}" loading="lazy">
+          </div>
+          <div class="product-body">
+            ${tag ? `<div class="product-tag">${esc(tag)}</div>` : ''}
+            <h3 class="product-name">${esc(p.n)}</h3>
+            ${p.s ? `<div class="product-sizes">Sizes: ${esc(p.s)}</div>` : ''}
+            ${p.d ? `<p class="product-desc">${esc(p.d)}</p>` : ''}
+            <div class="product-spacer"></div>
+            <a href="${link}" target="_blank" rel="noopener" class="btn-buy">Buy</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      groupEl.appendChild(grid);
+      section.appendChild(groupEl);
+    });
+
+    catalog.appendChild(section);
+  });
+}
+
+/* ── Search & Suggestions ── */
+searchInput.addEventListener('input', e => {
+  state.q = e.target.value;
+  updateSuggestions();
+  render();
+});
+
+searchInput.addEventListener('focus', () => {
+  state.focus = true;
+  updateSuggestions();
+});
+
+searchInput.addEventListener('blur', () => {
+  // delay to allow click on suggestion
+  setTimeout(() => {
+    state.focus = false;
+    suggestions.classList.remove('open');
+  }, 160);
+});
+
+function updateSuggestions() {
+  const needle = state.q.trim().toLowerCase();
+  if (!state.focus || !needle) {
+    suggestions.classList.remove('open');
+    return;
+  }
+  const cands = [];
+  PRODUCTS.forEach(c => c.groups.forEach(g => g.items.forEach(p => {
+    const label = [p.b, p.n].filter(Boolean).join(' ');
+    const l = label.toLowerCase(), n = p.n.toLowerCase();
+    if (!l.includes(needle)) return;
+    const score = n.startsWith(needle) ? 0 : l.startsWith(needle) ? 1 : n.includes(' ' + needle) ? 2 : 3;
+    cands.push({ label, cat: c.name, score, name: p.n });
+  })));
+  cands.sort((a, b) => a.score - b.score || a.label.localeCompare(b.label));
+  const top = cands.slice(0, 8);
+
+  if (top.length === 0) {
+    suggestions.classList.remove('open');
+    return;
+  }
+  suggestions.innerHTML = top.map(s =>
+    `<div class="suggest-item" data-name="${esc(s.name)}">
+      <span class="suggest-label">${esc(s.label)}</span>
+      <span class="suggest-cat">${esc(s.cat)}</span>
+    </div>`
+  ).join('');
+  suggestions.classList.add('open');
+
+  suggestions.querySelectorAll('.suggest-item').forEach(el => {
+    el.addEventListener('mousedown', () => {
+      state.q = el.dataset.name;
+      searchInput.value = el.dataset.name;
+      suggestions.classList.remove('open');
+      render();
+    });
+  });
+}
+
+/* ── Utility ── */
+function esc(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/* ── Boot ── */
+init();
+</script>
+</body>
+</html>
